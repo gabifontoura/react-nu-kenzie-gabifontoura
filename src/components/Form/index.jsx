@@ -40,14 +40,18 @@ const MoneyMovementForm = ({categoryList, addMovement}) => {
 
         <div className='flex between gap-1rem'>
 
-            <InputDefault value={formData.value} onChange={(event)=> setFormData({...formData, value: event.target.value})}labelContent='Valor' htmlFor='value' name='value' type='number' placeholder='1'/>
+            <div className='currencyDiv'>
+                <InputDefault value={formData.value} onChange={(event)=> setFormData({...formData, value: event.target.value})}labelContent='Valor' htmlFor='value' name='value' type='number' placeholder='1'/>
+                <span className='absolute currency'>R$</span>
+            </div>
+
 
             <div className='flex column gap-05rem'>
 
                 <label htmlFor='category'>Tipo de Valor</label>
                 <select defaultValue={formData.category} onChange={(event)=> setFormData({...formData, category: event.target.value})} name='category' className='select'>
-                    {categoryList.map((category, index) => (
-                        <option key={index} value={category.value}>{category.label}</option>
+                    {categoryList.map((category) => (
+                        <option key={category.value} value={category.value}>{category.label}</option>
                     ))}
                     
                 </select>

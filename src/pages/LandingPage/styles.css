@@ -10,3 +10,11 @@
 .intro{
     width: 22rem;
 }
+
+@media (max-width:700px){
+
+    .bgImg{
+        display: none;
+    }
+
+}

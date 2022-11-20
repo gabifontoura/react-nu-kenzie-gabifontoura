@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.css'
+import trash from '../../../assets/trash.svg'
 
 
 const FinancialCard = ({moneyMovement, removeMovement}) => {
@@ -12,7 +13,9 @@ const FinancialCard = ({moneyMovement, removeMovement}) => {
             </section>
             <section className='flex gap-3rem align-start'>
                 <h5>R${moneyMovement.value}</h5>
-                <button onClick={() => removeMovement(moneyMovement.title)} className='clean-btn'>Trash</button>
+                <button onClick={() => removeMovement(moneyMovement.title)} className='clean-btn'>
+                    <img src={trash} alt="remove" />
+                </button>
 
             </section>
         </li>

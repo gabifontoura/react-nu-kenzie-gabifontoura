@@ -1,11 +1,11 @@
 export const categoryData = [
     {
-      label:'Entrada',
+      label:'Entradas',
       value:'entrada'
     },
 
     {
-      label:'Despesa',
+      label:'Despesas',
       value:'despesa'
     }
   ]
