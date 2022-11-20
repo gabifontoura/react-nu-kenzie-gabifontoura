@@ -1,0 +1,10 @@
+.btnPrimary{
+    border: none;
+    background-color: var(--color-brand-1);
+    height: 2.5rem;
+    width: 100%;
+    border-radius: var(--radius-1);
+    color:#fff;
+    cursor: pointer;
+
+} 

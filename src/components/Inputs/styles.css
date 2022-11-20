@@ -1,0 +1,12 @@
+.inputDefault{
+    border: none;
+    height: 3.25rem;
+    background-color: var(--color-grey-1);
+    padding: 0 1rem;
+    border-radius: var(--radius-2);
+    width: 100%;
+
+}
+.inputDefault:focus{
+    outline: none;
+}

@@ -1,0 +1,8 @@
+.btnDefault{
+    border: none;
+    background-color: var(--color-grey-2 );
+    height: 2.5rem;
+    padding: 0 1rem;
+    border-radius: var(--radius-1);
+    cursor: pointer;
+} 
