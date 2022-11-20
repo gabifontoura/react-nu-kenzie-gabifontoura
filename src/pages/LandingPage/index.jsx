@@ -6,7 +6,7 @@ import imgStart from '../../assets/imgStart.svg'
 import logo from '../../assets/logo.svg'
 
 
-const StartPage = ({setLogin}) => {
+const LandingPage = ({setLogin}) => {
   return (
     <main className='mainStart flex gap-3rem'>
       <section className='intro flex column gap-2rem'>
@@ -19,10 +19,10 @@ const StartPage = ({setLogin}) => {
 
       </section>
 
-      <img src={imgStart} alt="" />
+      <img className='bgImg' src={imgStart} alt="" />
 
     </main>
   )
 }
 
-export default StartPage
+export default LandingPage

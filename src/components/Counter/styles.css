@@ -1,0 +1,9 @@
+.form{
+  
+    padding: 2rem;
+    border: 1px solid #E9ECEF;
+    border-radius: var(--radius-2);
+    background-color: #fff;
+    height: fit-content;
+   
+}

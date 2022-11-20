@@ -1,6 +1,6 @@
 
 import './App.css';
-import StartPage from "./pages/StartPage";
+import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
 import { useState } from 'react';
 import { categoryData, movementsData } from './data/data';
@@ -44,7 +44,7 @@ const App = () => {
         setLogin={setLogin} 
          />
          ) : (
-         <StartPage setLogin={setLogin} />
+         <LandingPage setLogin={setLogin} />
          ) }
   
     
