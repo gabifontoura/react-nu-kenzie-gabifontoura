@@ -1,0 +1,26 @@
+.form{
+    margin: 2rem 0;
+    padding: 2rem;
+    border: 1px solid #E9ECEF;
+    border-radius: var(--radius-2);
+    background-color: #fff;
+    height: fit-content;
+    width: 30%;
+
+}
+
+.select{
+    
+    border: none;
+    height: 3.25rem;
+    background-color: var(--color-grey-1);
+    padding: 0 1rem;
+    border-radius: var(--radius-2);
+    width:9.375rem;
+
+
+}
+
+.select:focus{
+    outline: none;
+}
