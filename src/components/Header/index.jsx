@@ -9,7 +9,7 @@ const Header = ({setLogin}) => {
   return (
     <div className='header flex between'>
       <img src={logoSecondary} alt="NuKenzie" />
-      <ButtonDefault content='Início' onClick={()=> setLogin(false) }/>
+      <ButtonDefault className='btnDefault' content='Início' onClick={()=> setLogin(false) }/>
       
     </div>
   )

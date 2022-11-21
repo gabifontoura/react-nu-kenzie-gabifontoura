@@ -1,9 +1,9 @@
 
-import './App.css';
-import LandingPage from "./pages/LandingPage";
-import HomePage from "./pages/HomePage";
-import { useState } from 'react';
-import { categoryData, movementsData } from './data/data';
+import './App.css'
+import LandingPage from "./pages/LandingPage"
+import HomePage from "./pages/HomePage"
+import { useState } from 'react'
+import { categoryData, movementsData } from './data/data'
 import React from 'react'
 
 
@@ -16,7 +16,10 @@ const App = () => {
   const [movementsList, setMovementList] = useState(movementsData)
   const [filter, setFilter] = useState('todos')
 
+
   const filteredMovementList = movementsList.filter(movement => filter === 'todos' ? true : movement.category === filter)
+
+
 
   
   
@@ -30,7 +33,7 @@ const App = () => {
     setMovementList(newList)
    
   }
-  
+ 
   
   return ( 
     <div className="App">
@@ -42,6 +45,8 @@ const App = () => {
         removeMovement={removeMovement}
         setFilter={setFilter}
         setLogin={setLogin} 
+
+    
          />
          ) : (
          <LandingPage setLogin={setLogin} />

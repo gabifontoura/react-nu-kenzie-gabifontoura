@@ -3,6 +3,7 @@ import ButtonPrimary from '../Buttons/ButtonPrimary'
 import InputDefault from '../Inputs'
 
 import './styles.css'
+import '../../App.css'
 
 
 const MoneyMovementForm = ({categoryList, addMovement}) => {
@@ -18,19 +19,20 @@ const MoneyMovementForm = ({categoryList, addMovement}) => {
      
     const submit = (event) => {
         event.preventDefault()
-        addMovement(formData)
-        setFormData({
-            title: '',
-            category: categoryList[0].value,
-            value: '',
-        })
+
+        if(formData.title !== '' && formData.value !== '' && formData.category !== ''){
+
+            addMovement(formData)
+            setFormData({
+                title: '',
+                category: categoryList[0].value,
+                value: '',
+            })
+        }
 
     }
 
   
-    
-
-    
 
   return (
    <form onSubmit={submit} className='form flex column gap-2rem'>
@@ -49,9 +51,9 @@ const MoneyMovementForm = ({categoryList, addMovement}) => {
             <div className='flex column gap-05rem'>
 
                 <label htmlFor='category'>Tipo de Valor</label>
-                <select defaultValue={formData.category} onChange={(event)=> setFormData({...formData, category: event.target.value})} name='category' className='select'>
+                <select defaultValue={formData.category} onChange={(event)=> setFormData({...formData, category: event.target.value} )} name='category' className='select'>
                     {categoryList.map((category) => (
-                        <option key={category.value} value={category.value}>{category.label}</option>
+                        <option key={category.value} value={category.value} className='text-2'>{category.label}</option>
                     ))}
                     
                 </select>
