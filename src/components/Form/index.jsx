@@ -30,8 +30,10 @@ const MoneyMovementForm = ({ addMovement }) => {
     }
   };
 
-  const newCategoryList = categoryData.filter((category)=> category.value !== 'todos')
-  console.log(newCategoryList)
+  const newCategoryList = categoryData.filter(
+    (category) => category.value !== "todos"
+  );
+  console.log(newCategoryList);
   return (
     <form onSubmit={submit} className="form flex column gap-2rem">
       <InputDefault
@@ -72,8 +74,6 @@ const MoneyMovementForm = ({ addMovement }) => {
             name="category"
             className="select"
           >
-        
-
             {newCategoryList.map((category) => (
               <option
                 key={category.value}

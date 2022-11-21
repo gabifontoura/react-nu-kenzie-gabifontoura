@@ -1,6 +1,4 @@
-
 import "./styles.css";
-import "../../App.css";
 
 import Header from "../../components/Header";
 import FinancialList from "../../components/FinancialSummaryList";
@@ -15,11 +13,8 @@ const HomePage = ({
   removeMovement,
   setFilter,
   setLogin,
-  validateColor
+  validateColor,
 }) => {
-
-
-
   return (
     <div>
       <Header setLogin={setLogin} />
@@ -35,19 +30,19 @@ const HomePage = ({
             <h1 className="title-2">Resumo Financeiro</h1>
             <ul className="btn-list flex gap-1rem clean-list">
               {categoryData.map((category, index) => {
-    
                 return (
-                    
-                    <li key={index}>
-                      <ButtonDefault
-                        className={
-                          validateColor(category.value) ? "primary btnDefault" : "default btnDefault"
-                        }
-                        onClick={() => setFilter(category.value)}
-                        content={category.label}
-                      />
-                    </li>
-                  )
+                  <li key={index}>
+                    <ButtonDefault
+                      className={
+                        validateColor(category.value)
+                          ? "primary btnDefault"
+                          : "default btnDefault"
+                      }
+                      onClick={() => setFilter(category.value)}
+                      content={category.label}
+                    />
+                  </li>
+                );
               })}
             </ul>
           </nav>
