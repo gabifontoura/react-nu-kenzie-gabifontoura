@@ -1,32 +1,33 @@
-import React from 'react'
-import './styles.css'
-import { useState } from 'react'
+import React from "react";
+import "./styles.css";
 
-const Counter = () => {
-    
-    const [counter, setCounter] = useState(0)
 
-    function add(){
-        console.log("+")
-        setCounter(counter + 1)
-    }
 
-    function sub(){
-        console.log("-")
-        setCounter(counter - 1)
-    }
+const Counter = ({ movementsList }) => {
+  
+    const sum = movementsList.reduce((accumulator, currentValue) => {
+
+        if(currentValue.category === "entrada"){
+
+            return accumulator + Number(currentValue.value);
+        }
+        else{
+            return accumulator - Number(currentValue.value);
+
+        }
+  }, 0);
+
+
   return (
-    <div className='form'>
-        <div className='flex between'>
-            <p>Valor Total</p>  
-            <span>${counter}</span>
+    <div className="form">
+      <div className="flex between">
+        <p>Valor Total</p>
+        <span className="title-2 colorPrimary">${ sum }</span>
+      </div>
 
-        </div>
-            <button type='button' onClick={add}>+</button>
-            <button type='button' onClick={sub}>-</button>
-        <p className='text-2'>O valor se refere ao saldo</p>
+      <p className="text-2">O valor se refere ao saldo</p>
     </div>
-  )
-}
+  );
+};
 
-export default Counter
+export default Counter;

@@ -1,5 +1,9 @@
 export const categoryData = [
     {
+      label:'Todas',
+      value:'todos'
+    },
+    {
       label:'Entradas',
       value:'entrada'
     },
@@ -12,7 +16,6 @@ export const categoryData = [
   
  export const movementsData = [
     // {
-
     //   title: 'Padaria',
     //   category: 'Despesa',
     //   value: 2.50
