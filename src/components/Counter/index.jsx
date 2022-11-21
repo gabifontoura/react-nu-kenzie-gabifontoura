@@ -24,7 +24,7 @@ const Counter = () => {
         </div>
             <button type='button' onClick={add}>+</button>
             <button type='button' onClick={sub}>-</button>
-        <p className='text-1'>O valor se refere ao saldo</p>
+        <p className='text-2'>O valor se refere ao saldo</p>
     </div>
   )
 }

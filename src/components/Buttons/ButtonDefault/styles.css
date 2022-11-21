@@ -6,3 +6,13 @@
     border-radius: var(--radius-1);
     cursor: pointer;
 } 
+
+.primary{
+    background-color: var(--color-brand-1 );
+    color: #fff;
+
+}
+
+.default{
+    background-color: var(--color-grey-2 );
+}
