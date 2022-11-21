@@ -89,7 +89,12 @@ body{
 }
 
 .colorWhite{
-    color:#fff
+    color:#fff;
+
+}
+
+.colorPrimary{
+    color:var(--color-brand-1);
 
 }
 

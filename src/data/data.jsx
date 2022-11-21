@@ -1,21 +1,17 @@
 export const categoryData = [
-    {
-      label:'Entradas',
-      value:'entrada'
-    },
+  {
+    label: "Todas",
+    value: "todos",
+  },
+  {
+    label: "Entradas",
+    value: "entrada",
+  },
 
-    {
-      label:'Despesas',
-      value:'despesa'
-    }
-  ]
-  
- export const movementsData = [
-    // {
+  {
+    label: "Despesas",
+    value: "despesa",
+  },
+];
 
-    //   title: 'Padaria',
-    //   category: 'Despesa',
-    //   value: 2.50
-    // }
-  ]
-  
+export const movementsData = [];

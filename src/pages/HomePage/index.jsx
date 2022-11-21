@@ -1,65 +1,49 @@
-import React, { useState } from "react";
 import "./styles.css";
-import "../../App.css";
 
 import Header from "../../components/Header";
 import FinancialList from "../../components/FinancialSummaryList";
 import MoneyMovementForm from "../../components/Form";
 import ButtonDefault from "../../components/Buttons/ButtonDefault";
-// import Counter from "../../components/Counter";
+import Counter from "../../components/Counter";
+import { categoryData } from "../../data/data";
 
 const HomePage = ({
   movementsList,
-  categoryList,
   addMovement,
   removeMovement,
   setFilter,
   setLogin,
+  validateColor,
 }) => {
-  const [isClicked, setClick] = useState(false);
-
-
-
-
   return (
     <div>
-
       <Header setLogin={setLogin} />
 
       <main className="container flex between">
         <section>
-          <MoneyMovementForm
-            categoryList={categoryList}
-            addMovement={addMovement}
-          />
-          {/* <Counter /> */}
+          <MoneyMovementForm addMovement={addMovement} />
+          <Counter movementsList={movementsList} />
         </section>
 
         <section className="summary">
           <nav className="nav flex between gap-1rem">
             <h1 className="title-2">Resumo Financeiro</h1>
             <ul className="btn-list flex gap-1rem clean-list">
-              <li onClick={() => setFilter("todos")}>
-                <ButtonDefault
-                  className={
-                    isClicked ? "primary btnDefault" : "default btnDefault"
-                  }
-                  onClick={() => setClick(!isClicked)}
-                  content="Todas"
-                />
-              </li>
-
-              {categoryList.map((category, index) => (
-                <li onClick={() => setFilter(category.value)} key={index}>
-                  <ButtonDefault
-                    className={
-                      isClicked ? "primary btnDefault" : "default btnDefault"
-                    }
-                    onClick={() => setClick(!isClicked)}
-                    content={category.label}
-                  />
-                </li>
-              ))}
+              {categoryData.map((category, index) => {
+                return (
+                  <li key={index}>
+                    <ButtonDefault
+                      className={
+                        validateColor(category.value)
+                          ? "primary btnDefault"
+                          : "default btnDefault"
+                      }
+                      onClick={() => setFilter(category.value)}
+                      content={category.label}
+                    />
+                  </li>
+                );
+              })}
             </ul>
           </nav>
           <FinancialList
