@@ -2,12 +2,11 @@ import "./App.css";
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
 import { useState } from "react";
-import { categoryData, movementsData } from "./data/data";
+import { movementsData } from "./data/data";
 import React from "react";
 
 const App = () => {
   const [login, setLogin] = useState(false);
-
   const [movementsList, setMovementList] = useState(movementsData);
   const [filter, setFilter] = useState("todos");
 
@@ -27,12 +26,12 @@ const App = () => {
   };
 
   const validateColor = (value) => {
-    if( filter === value){
-      return true
-    }else{
-      return false
+    if (filter === value) {
+      return true;
+    } else {
+      return false;
     }
-  }
+  };
 
   return (
     <div className="App">

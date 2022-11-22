@@ -19,6 +19,7 @@ const InputDefault = ({
         type={type}
         placeholder={placeholder}
         className="inputDefault"
+        required
       />
     </div>
   );
