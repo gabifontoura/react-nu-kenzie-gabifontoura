@@ -9,7 +9,7 @@ import { categoryData } from "../../data/data";
 const MoneyMovementForm = ({ addMovement }) => {
   const [formData, setFormData] = useState({
     title: "",
-    category: categoryData[0].value,
+    category: categoryData[1].value,
     value: "",
   });
 
@@ -24,7 +24,7 @@ const MoneyMovementForm = ({ addMovement }) => {
       addMovement(formData);
       setFormData({
         title: "",
-        category: categoryData[0].value,
+        category: categoryData[1].value,
         value: "",
       });
     }
@@ -33,7 +33,7 @@ const MoneyMovementForm = ({ addMovement }) => {
   const newCategoryList = categoryData.filter(
     (category) => category.value !== "todos"
   );
-  console.log(newCategoryList);
+
   return (
     <form onSubmit={submit} className="form flex column gap-2rem">
       <InputDefault
@@ -46,6 +46,7 @@ const MoneyMovementForm = ({ addMovement }) => {
         name="title"
         type="text"
         placeholder="Digite aqui sua descrição"
+        required
       />
 
       <div className="flex between gap-1rem">
@@ -60,6 +61,7 @@ const MoneyMovementForm = ({ addMovement }) => {
             name="value"
             type="number"
             placeholder="1"
+            required
           />
           <span className="absolute currency">R$</span>
         </div>
@@ -73,6 +75,7 @@ const MoneyMovementForm = ({ addMovement }) => {
             }
             name="category"
             className="select"
+            required
           >
             {newCategoryList.map((category) => (
               <option
