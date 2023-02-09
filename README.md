@@ -1,10 +1,9 @@
 # NuKenzie 
 
-Projeto feito para exercitar o uso do React, Styled-Components
-<br>
-------------------
+Aplicativo de cáculo financeiro simples, feito para exercitar o uso do React e Styled-Components.
 
-Getting Started with Create React App
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
