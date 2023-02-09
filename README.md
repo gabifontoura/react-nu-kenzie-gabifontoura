@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# NuKenzie 
+
+Projeto feito para exercitar o uso do React, Styled-Components
+<br>
+------------------
+
+Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
