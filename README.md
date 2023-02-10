@@ -1,6 +1,6 @@
 # NuKenzie 
 
-Aplicativo de cáculo financeiro simples, feito para exercitar o uso do React e Styled-Components.
+Aplicativo de cáculo financeiro responsivo, feito para exercitar o uso do React e Styled-Components.
 
 
 ## Getting Started with Create React App
